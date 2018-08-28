@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>!-->
 
 <h1>Instakun</h1>
 
@@ -14,7 +14,8 @@
     <% @feeds.each do |feed| %>
       <tr>
         <td>
-          <%= image_tag feed.image,:size => '150x120' %>
+          <h5>投稿者：<%= feed.user.name %></h5>
+          <%= image_tag feed.image,size:150 %>
         </td>
           <%#= feed.image %>
         <td><%= link_to 'Show', feed %></td>
