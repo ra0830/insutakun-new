@@ -29,6 +29,8 @@ gem 'mini_magick'
 
 gem 'bcrypt', '3.1.11'
 
+gem 'faker'
+
 
 group :development, :test do
 

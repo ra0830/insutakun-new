@@ -1,0 +1,14 @@
+<h1>お気に入り一覧</h1>
+
+<% @favorite_feeds.each do |feed| %>
+  <tr>
+    <td>
+      <h5>投稿者：<%= feed.user.name %></h5>
+      <%= image_tag feed.image,size:150 %>
+    </td>
+      <%#= feed.image %>
+    <td><%= link_to 'Show', feed %></td>
+    <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
+    <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
