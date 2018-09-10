@@ -1,6 +1,9 @@
 <!--<p id="notice"><%= notice %></p>!-->
 
 <h1>Instakun</h1>
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <table>
   <thead>
@@ -18,9 +21,9 @@
           <%= image_tag feed.image,size:150 %>
         </td>
           <%#= feed.image %>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>・<%= link_to 'Show', feed, class: 'btn btn-success btn-sm' %></td>
+        <td>・<%= link_to 'Edit', edit_feed_path(feed), class: 'btn btn-success btn-sm' %></td>
+        <td>・<%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-success btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,4 @@
 
 <br>
 
-<%= link_to '新規投稿', new_feed_path %>
+・<%= link_to '新規投稿', new_feed_path, class: 'btn btn-success btn-sm' %>
